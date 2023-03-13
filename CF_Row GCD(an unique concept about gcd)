@@ -1,0 +1,6 @@
+gcd(a,b)= gcd(a,a%b) = gcd(a,|a-b|)
+now similarly
+gcd(a,b,c)=gcd(a,gcd(b,b%c))=gcd(a,gcd(b,|b-c|)=gcd(a,|a-b|,|b-c|)
+gcd(a+x,b+x,c+x) = gcd(a+x,|a+x-b-x|,|b+x-c-x|) = gcd(a+x,|a-b|,|b-c|)
+
+
