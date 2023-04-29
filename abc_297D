@@ -1,0 +1,18 @@
+if A>B, replace A with A−B;
+if A<B, replace B with B−A.
+How many times will you repeat it until A=B?
+1≤A,B≤10^18
+
+
+This will contain limited iterations we can see this by some examples 
+ll call(ll a , ll b)
+{
+  if(a==b)return 0;
+  if(a<b)
+    swap(a,b);
+  if(a%b==0)
+    return (a/b)-1;
+  else
+    return (a/b)+call(a%b,b);
+
+}
