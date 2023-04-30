@@ -1,0 +1,17 @@
+An array is beautiful if all its subarrays of length k have the same sum.A subarray is given that may not be beautiful.
+But we can make it by inserting as many elements as we can. We don't need to minimize the number of inserting elements.
+Integers may be inserted anywhere (even before the first or after the last element).If not possible then print -1
+
+1) not possible case - when we have more than k distict elements because we want k similar periods
+2) possible case - we will take distict integers and we will insert 1(or any other integers) to fullfil the length k(if we need to add) and let it be a list called b.we will 
+repeat the list n times.
+
+ex - 1 1 2 1 3
+if k = 4
+our single list is
+1 2 3 1
+
+we will repeat it n=5 times
+1 2 3 1 1 2 3 1 1 2 3 1 1 2 3 1
+
+https://codeforces.com/blog/entry/76555
