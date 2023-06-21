@@ -1,0 +1,20 @@
+In this problem I need to make a string 0000...11 or 111....00 or 1111111..11 or 0000...00  in min step
+in each step i can either flip 1 to 0 or vice versa
+if given 1000111001 
+then 0000111111 we can form this using only 3 steps , it's the min step required
+if we try to make it 11111111000 we will need more step . similarly for 11..11 or 000..000 pattern we will require more step
+
+Now to find the min step what we do is we cont how many zeroes we have came accross and how many s are left
+done_zeroes need to be 0 and remaining zeroes need to be 1 and done one needs to be 0 if we want to make 0001111 types pattern
+
+ ll Z = count(a.begin(), a.end(),'0'),O=a.size()-Z,z=0,o=0,x=1e9,y=1e9;
+    rep(i, a.size())
+    {
+      if (a[i] == '0')
+        z++;
+      else
+        o++;
+      x = min(x, o + Z - z); //00....11
+      y = min(y, z + O - o); //11....00
+    }
+    cout << min(x, y) << endl;
